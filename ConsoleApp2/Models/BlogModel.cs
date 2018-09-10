@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CodeFirstDB.Data;
 
 namespace CodeFirstDB.Models
 {
@@ -11,7 +12,17 @@ namespace CodeFirstDB.Models
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            using (var db = new BloggingContext())
+            {
+                // prompt the user to create a new blog. This will be added to the DB
+                Console.Write("Enter a name for a new blog");
+                var name = Console.ReadLine();
+
+                var blog = new Blog { Name = name };
+                db.Blogs.Add(blog)
+
+            }
+           
         }
     }
 
