@@ -19,7 +19,24 @@ namespace CodeFirstDB.Models
                 var name = Console.ReadLine();
 
                 var blog = new Blog { Name = name };
-                db.Blogs.Add(blog)
+                db.Blogs.Add(blog);
+                db.SaveChanges();
+
+                // Select each blog in Blogs
+                var query = from b in db.Blogs
+                            orderby b.Name
+                            select b;
+
+                // loop through the array of blogs that query returns and display each one's name to the user
+                Console.WriteLine("All blogs from the database: ");
+                foreach(var i in query)
+                {
+                    Console.WriteLine(i.Name);
+                }
+
+                Console.WriteLine("Press any key to exit");
+                Console.ReadKey();
+
 
             }
            
