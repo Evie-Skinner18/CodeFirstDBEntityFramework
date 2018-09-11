@@ -47,8 +47,10 @@ namespace CodeFirstDB.Net.Models
     {
         public int BlogId { get; set; }
         public string Name { get; set; }
+        public string Url { get; set; }
 
         // virtual method that returns a list of Posts. Declaring it as virtual because we might want to override it later
+        // Actually yes we override it with the seed when we do migrations
         public virtual List<Post> Posts { get; set; }
     }
 
