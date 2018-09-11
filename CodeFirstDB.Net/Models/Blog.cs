@@ -15,7 +15,7 @@ namespace CodeFirstDB.Net.Models
             using (var db = new BloggingContext())
             {
                 // prompt the user to create a new blog. This will be added to the DB
-                Console.Write("Enter a name for a new blog");
+                Console.Write("Enter a name for a new blog: ");
                 var name = Console.ReadLine();
 
                 var blog = new Blog { Name = name };
