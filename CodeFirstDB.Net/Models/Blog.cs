@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CodeFirstDB.Net.Data;
+using System.ComponentModel.DataAnnotations;
 
 namespace CodeFirstDB.Net.Models
 {
@@ -21,6 +22,16 @@ namespace CodeFirstDB.Net.Models
                 var blog = new Blog { Name = name };
                 db.Blogs.Add(blog);
                 db.SaveChanges();
+
+                /*
+                Console.WriteLine("Enter a new name for a post: ");
+                var title = Console.ReadLine();
+                Console.WriteLine("Enter some irreverent thoughts and wise nuggets to go in your post: ");
+                var thoughts = Console.ReadLine();
+                var post = new Post { Title = title;};
+                db.Posts.Add(post);
+                db.SaveChanges();
+                */
 
                 // Select each blog in Blogs
                 var query = from b in db.Blogs
@@ -65,4 +76,10 @@ namespace CodeFirstDB.Net.Models
         public virtual Blog Blog { get; set; }
     }
 
+    public class User
+    {
+        [Key]
+        public string Username { get; set; }
+        public string DisplayName { get; set; }
+    }
 }

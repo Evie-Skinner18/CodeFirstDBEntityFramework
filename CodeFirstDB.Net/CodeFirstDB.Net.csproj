@@ -53,6 +53,14 @@
     <Compile Include="Migrations\201809110826330_InitialCreate.Designer.cs">
       <DependentUpon>201809110826330_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809111148451_AddUrl.cs" />
+    <Compile Include="Migrations\201809111148451_AddUrl.Designer.cs">
+      <DependentUpon>201809111148451_AddUrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809111344507_AddUser.cs" />
+    <Compile Include="Migrations\201809111344507_AddUser.Designer.cs">
+      <DependentUpon>201809111344507_AddUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Blog.cs" />
     <Compile Include="Data\DbContext.cs" />
@@ -65,6 +73,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201809110826330_InitialCreate.resx">
       <DependentUpon>201809110826330_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809111148451_AddUrl.resx">
+      <DependentUpon>201809111148451_AddUrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809111344507_AddUser.resx">
+      <DependentUpon>201809111344507_AddUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
