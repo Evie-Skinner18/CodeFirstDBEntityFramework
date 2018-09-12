@@ -15,6 +15,11 @@ namespace CodeFirstDB.Net.Models
         {
             using (var db = new BloggingContext())
             {
+
+                // need to make a loop like in the exercise calculator. do you want to write a new blog post for an existing blog?
+                // Make a new blog? view a list of all blogs? Read a partic blog post? Type exit to exit
+
+
                 // prompt the user to create a new blog. This will be added to the DB
                 Console.Write("Enter a name for a new blog: ");
                 var name = Console.ReadLine();
@@ -23,15 +28,7 @@ namespace CodeFirstDB.Net.Models
                 db.Blogs.Add(blog);
                 db.SaveChanges();
 
-                /*
-                Console.WriteLine("Enter a new name for a post: ");
-                var title = Console.ReadLine();
-                Console.WriteLine("Enter some irreverent thoughts and wise nuggets to go in your post: ");
-                var thoughts = Console.ReadLine();
-                var post = new Post { Title = title;};
-                db.Posts.Add(post);
-                db.SaveChanges();
-                */
+                
 
                 // Select each blog in Blogs
                 var query = from b in db.Blogs
@@ -44,6 +41,16 @@ namespace CodeFirstDB.Net.Models
                 {
                     Console.WriteLine(i.Name);
                 }
+
+                /*
+                Console.WriteLine("Enter a new name for a post: ");
+                var title = Console.ReadLine();
+                Console.WriteLine("Enter some irreverent thoughts and wise nuggets to go in your post: ");
+                var thoughts = Console.ReadLine();
+                var post = new Post { Title = title;};
+                db.Posts.Add(post);
+                db.SaveChanges();
+                */
 
                 Console.WriteLine("Press any key to exit");
                 Console.ReadKey();
