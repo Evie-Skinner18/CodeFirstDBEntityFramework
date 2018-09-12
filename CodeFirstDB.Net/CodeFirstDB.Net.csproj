@@ -61,6 +61,10 @@
     <Compile Include="Migrations\201809111344507_AddUser.Designer.cs">
       <DependentUpon>201809111344507_AddUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809121614160_ChangeDisplayName.cs" />
+    <Compile Include="Migrations\201809121614160_ChangeDisplayName.Designer.cs">
+      <DependentUpon>201809121614160_ChangeDisplayName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Blog.cs" />
     <Compile Include="Data\DbContext.cs" />
@@ -79,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809111344507_AddUser.resx">
       <DependentUpon>201809111344507_AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809121614160_ChangeDisplayName.resx">
+      <DependentUpon>201809121614160_ChangeDisplayName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
